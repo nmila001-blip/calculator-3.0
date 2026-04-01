@@ -113,6 +113,7 @@ document.querySelector(".backspace").addEventListener("click", () =>{
     display.value = display.value.slice(0, -1);
 });
 document.addEventListener("keydown", (e) => {
+  e.preventDefault();
    const allowed = "012345+-*/.%"; 
    if(allowed.includes(e.key)){
      display.value += e.key;
