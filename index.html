@@ -113,14 +113,16 @@ document.querySelector(".backspace").addEventListener("click", () =>{
     display.value = display.value.slice(0, -1);
 });
 document.addEventListener("keydown", (e) => {
-  e.preventDefault();
-   const allowed = "012345+-*/.%"; 
-   if(allowed.includes(e.key)){
-     display.value += e.key;
-   }
-   if(e.key === "Enter")document.querySelector(".equals").click();
-   if(e.key === "Backspace")document.querySelector(".backspace").click();
-    if(e.key === "Escape")document.querySelector(".clear").click();
+    e.preventDefault(); 
+    const allowed = "0123456789+-*/.%";
+
+    if (allowed.includes(e.key)) {
+        display.value += e.key;
+    }
+
+    if (e.key === "Enter") document.querySelector(".equals").click();
+    if (e.key === "Backspace") document.querySelector(".backspace").click();
+    if (e.key === "Escape") document.querySelector(".clear").click();
 });
     </script>
 </body>
